@@ -1,11 +1,11 @@
 {
   "private": true,
-  "scripts": {
-    "build": "next build",
-    "dev": "next dev --turbopack",
-    "start": "next start",
-    "seed": "ts-node --esm prisma/seed.ts"
-  },
+ "scripts": {
+  "build": "next build",
+  "dev": "next dev --turbopack",
+  "start": "next start",
+  "seed": "tsx prisma/seed.ts"
+},
   "dependencies": {
     "@heroicons/react": "^2.2.0",
     "@prisma/client": "^6.14.0",
@@ -30,6 +30,7 @@
     "@types/react": "19.0.7",
     "@types/react-dom": "19.0.3",
     "ts-node": "^10.9.2",
+    "tsx": "^4.20.4",
     "typescript": "5.7.3"
   },
   "pnpm": {
@@ -39,7 +40,6 @@
     ]
   },
   "prisma": {
-  "seed": "ts-node --compiler-options {\"module\":\"CommonJS\"} prisma/seed.ts"
-}
-
+  "seed": "tsx prisma/seed.ts"
+  }
 }
